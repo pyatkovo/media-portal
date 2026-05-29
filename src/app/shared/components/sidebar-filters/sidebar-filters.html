@@ -1,0 +1,173 @@
+﻿<aside class="sidebar-filters">
+  <form class="search">
+    <div class="search__field">
+      <div class="search__field-input">
+      <img
+        src="assets/images/icons/search.svg"
+        alt=""
+        aria-hidden="true"
+      >
+      <input
+        type="text"
+        [value]="searchValue"
+        (input)="onSearchInput($event)"
+        placeholder="Поиск публикации"
+      >
+      </div>
+      <button
+        *ngIf="searchValue"
+        type="button"
+        class="search__clear"
+        (click)="clearSearch()"
+        aria-label="Очистить поиск"
+      >
+        <img src="assets/images/icons/cross.svg" alt="" aria-hidden="true">
+      </button>
+      <button
+        type="button"
+        class="search__button"
+        [class.search__button--active]="searchValue.trim()"
+      >
+        Найти
+      </button>
+    </div>
+  </form>
+
+  <div class="selected-filters">
+    <div class="selected-filters__header">
+      <h3 class="selected-filters__title">
+        Выбранные фильтры  <span>{{ selectedTagIds.length }}</span>
+      </h3>
+
+      <button type="button" class="selected-filters__clear" (click)="clearSelectedTags()">
+        Очистить
+      </button>
+    </div>
+
+    <div class="filter-chip-list">
+      @for (tag of selectedTags; track tag.id) {
+        <div class="filter-chip">
+          <span>{{ tag.label }}</span>
+          <button type="button" (click)="removeSelectedTag(tag.id)">
+            <img src="/assets/images/icons/cross-filter.svg" alt="Delete Filter">
+          </button>
+        </div>
+      }
+    </div>
+  </div>
+
+  <div class="filter-group">
+    <h3 class="filter-group__title">Вид спорта</h3>
+
+    <div class="filter-select-wrap">
+      <button
+        type="button"
+        class="filter-select"
+        [class.filter-select--open]="isSportOpen"
+        (click)="toggleSport()"
+      >
+      <span>
+        {{ selectedSport.label }}
+        <span class="filter-count">({{ selectedSport.count }})</span>
+      </span>
+
+        <img
+          class="filter-select__chevron"
+          src="assets/images/icons/chevron.svg"
+          alt=""
+          aria-hidden="true"
+        >
+      </button>
+
+      @if (isSportOpen) {
+        <div class="filter-dropdown">
+          @for (option of sportOptions; track option.id) {
+            <button
+              type="button"
+              class="filter-dropdown__item"
+              [class.filter-dropdown__item--active]="option.id === selectedSport.id"
+              (click)="selectSport(option)"
+            >
+            <span>
+              {{ option.label }}<span class="filter-count">({{ option.count }})</span>
+            </span>
+
+              @if (option.id === selectedSport.id) {
+                <span class="filter-dropdown__check"><img src="/assets/images/icons/check-filter.svg" alt="Set Filter"></span>
+              }
+            </button>
+          }
+
+          <button
+            type="button"
+            class="filter-dropdown__save"
+            (click)="saveSport()"
+          >
+            Сохранить
+          </button>
+        </div>
+      }
+    </div>
+  </div>
+
+  <div class="filter-group">
+    <h3 class="filter-group__title">Теги</h3>
+
+    <div class="filter-select-wrap">
+      <button
+        type="button"
+        class="filter-select"
+        [class.filter-select--open]="isTagOpen"
+        (click)="toggleTag()"
+      >
+        <span>
+          {{ selectedTagsLabel }}
+          @if (selectedTagCount !== null) {
+            <span class="filter-count">({{ selectedTagCount }})</span>
+          }
+        </span>
+
+        <img
+          class="filter-select__chevron"
+          src="assets/images/icons/chevron.svg"
+          alt=""
+          aria-hidden="true"
+        >
+      </button>
+
+      @if (isTagOpen) {
+        <div class="filter-dropdown">
+          @for (option of tagOptions; track option.id) {
+            <button
+              type="button"
+              class="filter-dropdown__item"
+              [class.filter-dropdown__item--active]="isTagSelected(option.id)"
+              (click)="toggleTagOption(option)"
+            >
+              <span>
+                {{ option.label }}<span class="filter-count">({{ option.count }})</span>
+              </span>
+
+              @if (isTagSelected(option.id)) {
+                <span class="filter-dropdown__check"><img src="/assets/images/icons/check-filter.svg" alt="Set Filter"></span>
+              }
+            </button>
+          }
+
+          <button
+            type="button"
+            class="filter-dropdown__save"
+            (click)="saveTag()"
+          >
+            Сохранить
+          </button>
+        </div>
+      }
+    </div>
+    <button type="button" class="show-button">
+      Показать 17 публикаций
+    </button>
+  </div>
+
+
+</aside>

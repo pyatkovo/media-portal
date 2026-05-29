@@ -1,0 +1,68 @@
+<article class="media-card">
+  <header class="media-card__header">
+    <div class="media-card__author">
+      <div class="media-card__logo">
+        <img
+          src="assets/images/logo-card.jpg"
+          alt="SportClick"
+        >
+      </div>
+      <div>
+        <h3 class="media-card__name">SportClick</h3>
+        <p class="media-card__date">20 августа 2024 в 16:50</p>
+      </div>
+    </div>
+
+    <button class="media-card__menu" type="button" aria-label="Открыть меню">
+      <img src="/assets/images/icons/more.svg" alt="more">
+    </button>
+  </header>
+
+  <div class="media-card__image-wrap">
+    <img
+      class="media-card__image"
+      src="assets/images/media/media-1.png"
+      alt="Хоккейная команда"
+    >
+
+    <span class="media-card__tag">Хоккей</span>
+    <span class="media-card__counter">1 из 6</span>
+  </div>
+
+  <div class="media-card__body">
+    <h2 class="media-card__title">
+      {{ mediaCardTitle }}
+    </h2>
+
+    <p class="media-card__description" [appInlineTruncate]="mediaCardDesc" [truncateMaxHeight]="96">
+      <span class="media-card__description-text" data-truncate-text></span>
+      <button class="media-card__more" type="button">дальше</button>
+    </p>
+
+    <footer class="media-card__footer">
+      <button class="media-card__stat" type="button">
+        <img src="/assets/images/icons/like.svg" alt="Likes">
+        <span>Понравилось 321</span>
+      </button>
+
+      <button class="media-card__stat" type="button">
+        <img src="/assets/images/icons/comment.svg" alt="Comments">
+        <span>5</span>
+      </button>
+
+      <div class="media-card__stat">
+        <img src="/assets/images/icons/view.svg" alt="View">
+        <span>321</span>
+      </div>
+
+      <button class="media-card__stat" type="button">
+        <img src="/assets/images/icons/share.svg" alt="Share">
+      </button>
+    </footer>
+  </div>
+</article>
+
+
+
+
+

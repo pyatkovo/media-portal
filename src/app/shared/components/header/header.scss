@@ -1,0 +1,138 @@
+.header {
+  width: 100%;
+  background-color: #F6F6F6;
+}
+
+.header__inner {
+  min-height: 88px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  gap: 40px;
+}
+.header-left{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 54px;
+}
+.nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.nav-btn {
+  padding: 18px 30px;
+  height: 56px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: inherit;
+  border-radius: 9999px;
+  border: none;
+  background: #4C4C4C;
+  cursor: pointer;
+  &.grey{
+    background: #EAEAEA;
+    color: #000;
+  }
+}
+
+.add-btn {
+  display: inline-flex;
+  height: 56px;
+  padding: 0 30px;
+  align-items: center;
+  background: #FFEEEE;
+  color: #EA0130;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: inherit;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+}
+
+
+
+.logo img {
+  display: block;
+  max-height: 44px;
+  width: auto;
+}
+
+.add-btn__icon {
+  width: 10px;
+  height: 10px;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+.actions {
+  display: flex;
+  align-items: flex-start;
+  gap: 28px;
+  height: 65px;
+}
+
+.action-item {
+  border: none;
+  background: transparent;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.action-icon {
+  width: 56px;
+  height: 40px;
+
+  background: #eaeaea;
+  border-radius: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+}
+
+.action-item__icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.action-label {
+  color: #818189;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: inherit;
+  line-height: 1;
+}
+
+.badge {
+  position: absolute;
+  top: 0px;
+  right: 12px;
+
+  width: 16px;
+  height: 16px;
+
+  border-radius: 50%;
+  background: #DC3644;
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 11px;
+  font-weight: 500;
+}

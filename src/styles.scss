@@ -1,1 +1,31 @@
-/* You can add global styles to this file, and also import other style files */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  color: #1f1f1f;
+  background: #ffff;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+.site-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 37px;
+}
