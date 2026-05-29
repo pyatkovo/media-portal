@@ -49,7 +49,7 @@
         <div class="filter-chip">
           <span>{{ tag.label }}</span>
           <button type="button" (click)="removeSelectedTag(tag.id)">
-            <img src="/assets/images/icons/cross-filter.svg" alt="Delete Filter">
+            <img src="assets/images/icons/cross-filter.svg" alt="Delete Filter">
           </button>
         </div>
       }
@@ -93,7 +93,7 @@
             </span>
 
               @if (option.id === selectedSport.id) {
-                <span class="filter-dropdown__check"><img src="/assets/images/icons/check-filter.svg" alt="Set Filter"></span>
+                <span class="filter-dropdown__check"><img src="assets/images/icons/check-filter.svg" alt="Set Filter"></span>
               }
             </button>
           }
@@ -149,7 +149,7 @@
               </span>
 
               @if (isTagSelected(option.id)) {
-                <span class="filter-dropdown__check"><img src="/assets/images/icons/check-filter.svg" alt="Set Filter"></span>
+                <span class="filter-dropdown__check"><img src="assets/images/icons/check-filter.svg" alt="Set Filter"></span>
               }
             </button>
           }
