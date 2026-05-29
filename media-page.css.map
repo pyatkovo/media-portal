@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/pages/media-page/media-page.scss"],
+  "sourcesContent": ["\r\n.breadcrumbs {\r\n  font-weight: 400;\r\n  font-size: 14px;\r\n  line-height: 130%;\r\n  margin-top: 30px;\r\n  display: flex;\r\n  justify-content: start;\r\n  align-items: center;\r\n  gap: 20px;\r\n  color: #e0e0e0;\r\n\r\n  .span-slash{\r\n    font-weight: 300;\r\n  }\r\n  .span-black {\r\n    color: #1F1F1F;\r\n  }\r\n\r\n  .span-grey {\r\n    color: #818189;\r\n  }\r\n}\r\n\r\n.sidebar-filters__title {\r\n  font-size: 29px;\r\n  font-weight: 600;\r\n  margin: 15px 0 30px 0;\r\n  line-height: 140%;\r\n}\r\n\r\n.media-page {\r\n  display: grid;\r\n  grid-template-columns: 340px 1fr;\r\n  gap: 40px;\r\n}\r\n.media-content {\r\n  display: grid;\r\n  grid-template-columns: repeat(2, minmax(0, 1fr));\r\n  gap: 20px;\r\n}\r\n"],
+  "mappings": ";AACA,CAAA;AACE,eAAA;AACA,aAAA;AACA,eAAA;AACA,cAAA;AACA,WAAA;AACA,mBAAA;AACA,eAAA;AACA,OAAA;AACA,SAAA;;AAEA,CAXF,YAWE,CAAA;AACE,eAAA;;AAEF,CAdF,YAcE,CAAA;AACE,SAAA;;AAGF,CAlBF,YAkBE,CAAA;AACE,SAAA;;AAIJ,CAAA;AACE,aAAA;AACA,eAAA;AACA,UAAA,KAAA,EAAA,KAAA;AACA,eAAA;;AAGF,CAAA;AACE,WAAA;AACA,yBAAA,MAAA;AACA,OAAA;;AAEF,CAAA;AACE,WAAA;AACA,yBAAA,OAAA,CAAA,EAAA,OAAA,CAAA,EAAA;AACA,OAAA;;",
+  "names": []
+}

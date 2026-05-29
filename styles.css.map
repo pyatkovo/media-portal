@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/styles.scss"],
+  "sourcesContent": ["*,\n*::before,\n*::after {\n  box-sizing: border-box;\n}\n\nhtml,\nbody {\n  margin: 0;\n  padding: 0;\n  font-family: \"Roboto\", sans-serif;\n}\n\nbody {\n  color: #1f1f1f;\n  background: #ffff;\n}\n\ninput,\nbutton,\ntextarea,\nselect {\n  font: inherit;\n}\n\n.site-container {\n  width: 100%;\n  max-width: 1440px;\n  margin: 0 auto;\n  padding: 0 37px;\n}\n"],
+  "mappings": ";AAAA;AAAA,CAAA;AAAA,CAAA;AAGE,cAAA;;AAGF;AAAA;AAEE,UAAA;AACA,WAAA;AACA,eAAA,QAAA,EAAA;;AAGF;AACE,SAAA;AACA,cAAA;;AAGF;AAAA;AAAA;AAAA;AAIE,QAAA;;AAGF,CAAA;AACE,SAAA;AACA,aAAA;AACA,UAAA,EAAA;AACA,WAAA,EAAA;;",
+  "names": []
+}
